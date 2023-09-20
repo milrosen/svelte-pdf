@@ -2,7 +2,6 @@
 /** @typedef {typeof __propDef.events}  PdfViewerEvents */
 /** @typedef {typeof __propDef.slots}  PdfViewerSlots */
 export default class PdfViewer extends SvelteComponentTyped<{
-    data: any;
     url: any;
     scale?: number | undefined;
     pageNum?: number | undefined;
@@ -11,6 +10,10 @@ export default class PdfViewer extends SvelteComponentTyped<{
     showBorder?: boolean | undefined;
     totalPage?: number | undefined;
     downloadFileName?: string | undefined;
+	navigation: {
+		nextPage: Function,
+		prevPage: Function,
+	};
 }, {
     keydown: KeyboardEvent;
 } & {
