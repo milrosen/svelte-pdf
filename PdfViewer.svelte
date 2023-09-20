@@ -167,111 +167,19 @@
 </script>
 
 <svelte:window bind:innerWidth={pageWidth} bind:innerHeight={pageHeight} />
-
 <canvas bind:this={canvas} width={pageWidth} height={pageHeight} />
 
 <style>
   :global(html) {
     scroll-behavior: smooth;
   }
-  .parent {
-    display: flex;
-    flex-direction: column;
-    margin: 0 1.25rem;
-  }
-  .control-start {
-    padding: 1.25rem;
-  }
-  .line {
-    display: flex;
-    flex-direction: row;
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 1px;
-    border-left-width: 0px;
-    border-color: #4fd1c5;
-    border-style: dotted;
-    margin-bottom: 0.75rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    justify-content: center;
-  }
-  .button-control {
-    display: flex;
-    flex-direction: row;
-    padding: 0.5rem;
-    margin: 0.75rem;
-    border-radius: 0.25rem;
-    overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-      0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border-left-width: 1px;
-    border-bottom-width: 1px;
-    border-right-width: 1px;
-    cursor: pointer;
-  }
-  .viewer {
-    border-width: 1px;
-    border-color: #000;
-    border-style: solid;
-  }
-  .icon {
-    height: 1.25rem;
-    width: 1.25rem;
-    fill: currentColor;
-    color: #38b2ac;
-  }
-  .disabled {
-    cursor: not-allowed;
-    box-shadow: none;
-  }
-  #topBtn {
-    position: fixed;
-    bottom: 10px;
-    float: right;
-    right: 10%;
-    left: 90%;
-    max-width: 30px;
-    width: 100%;
-    border-color: #000;
-    background-color: #fff;
-    padding: 0.5px;
-    border-radius: 9999px;
-  }
-  #topBtn:hover {
-    background-color: #000;
-    color: #fff;
-  }
+
   /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
   */
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    .parent {
-      margin: 0;
-    }
-    .control-start {
-      padding: 0;
-    }
-    .line {
-      justify-content: center;
-    }
-    .button-control {
-      display: flex;
-      flex-direction: row;
-      padding: 0.5rem;
-      margin: 0.5rem;
-      border-radius: 0.25rem;
-      overflow: hidden;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      border-left-width: 1px;
-      border-bottom-width: 1px;
-      border-right-width: 1px;
-      cursor: pointer;
-    }
     canvas {
       width: 100%;
       height: 100%;
@@ -283,29 +191,6 @@
   */
 
   @media (min-width: 481px) and (max-width: 767px) {
-    .parent {
-      margin: 0;
-    }
-    .control-start {
-      padding: 0;
-    }
-    .line {
-      justify-content: center;
-    }
-    .button-control {
-      display: flex;
-      flex-direction: row;
-      padding: 0.5rem;
-      margin: 0.5rem;
-      border-radius: 0.25rem;
-      overflow: hidden;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      border-left-width: 1px;
-      border-bottom-width: 1px;
-      border-right-width: 1px;
-      cursor: pointer;
-    }
     canvas {
       width: 100%;
       height: 100%;
@@ -318,29 +203,6 @@
   */
 
   @media (min-width: 320px) and (max-width: 480px) {
-    .parent {
-      margin: 0;
-    }
-    .control-start {
-      padding: 0;
-    }
-    .line {
-      justify-content: center;
-    }
-    .button-control {
-      display: flex;
-      flex-direction: row;
-      padding: 0.4rem;
-      margin: 0.4rem;
-      border-radius: 0.25rem;
-      overflow: hidden;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      border-left-width: 1px;
-      border-bottom-width: 1px;
-      border-right-width: 1px;
-      cursor: pointer;
-    }
     canvas {
       width: 100%;
       height: 100%;
